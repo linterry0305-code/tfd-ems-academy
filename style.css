@@ -2,15 +2,15 @@
 
 :root {
     --primary-blue: #00428B;      /* Logo 深藍 */
+    --light-blue-bg: #E6F2FF;     /* 淡藍色背景 */
     --accent-cyan: #00B2D4;       /* Logo 青藍 */
     --emergency-red: #FF3B30;     /* 緊急紅 */
-    --bg-gray: #F0F2F5;
-    --sidebar-w: 260px;
     --white: #FFFFFF;
-    --dark-text: #1a202c;
-    --muted-text: #718096;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --light-gray: #F8FAFC;
+    --dark-text: #1A365D;         /* 深藍色文字 */
+    --muted-text: #64748B;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 }
 
 * {
@@ -21,33 +21,53 @@
 }
 
 body {
-    background-color: var(--bg-gray);
+    background-color: var(--white);
     color: var(--dark-text);
     display: flex;
     min-height: 100vh;
+    position: relative;
+}
+
+/* 背景 Logo 放大 + 模糊 */
+.bg-watermark {
+    position: fixed;
+    top: 50%;
+    left: 60%; /* 稍微偏右，避開側邊欄 */
+    transform: translate(-50%, -50%);
+    width: 120vmin;
+    height: 120vmin;
+    background: url('logo.png') no-repeat center;
+    background-size: contain;
+    filter: blur(40px); /* 模糊處理 */
+    opacity: 0.12;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* 側邊欄 Sidebar */
 aside {
     width: var(--sidebar-w);
-    background: var(--primary-blue);
-    color: white;
+    background: var(--light-blue-bg);
+    color: var(--primary-blue);
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     position: fixed;
     height: 100vh;
-    transition: all 0.3s;
+    z-index: 10;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
 }
 
 .sidebar-header {
     padding: 0 25px 30px;
     text-align: center;
+    color: var(--primary-blue);
+    font-weight: 800;
 }
 
 .sidebar-logo {
-    width: 60px;
-    margin-bottom: 10px;
+    width: 70px;
+    margin-bottom: 15px;
 }
 
 .sidebar-nav {
@@ -59,19 +79,21 @@ aside {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: rgba(255,255,255,0.7);
+    color: var(--muted-text);
     text-decoration: none;
     transition: all 0.2s;
     font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .nav-item:hover, .nav-item.active {
-    color: white;
-    background: rgba(255,255,255,0.1);
+    color: var(--primary-blue);
+    background: rgba(0, 66, 139, 0.05);
 }
 
 .nav-item.active {
-    border-left: 4px solid var(--accent-cyan);
+    border-right: 4px solid var(--primary-blue);
+    background: rgba(0, 66, 139, 0.08);
 }
 
 /* 主內容區 Main Content */
@@ -79,7 +101,7 @@ main {
     margin-left: var(--sidebar-w);
     flex: 1;
     padding: 40px;
-    background: var(--bg-gray);
+    background: transparent; /* 讓背景模糊 Logo 透出來 */
 }
 
 .top-bar {
