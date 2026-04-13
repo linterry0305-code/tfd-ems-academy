@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北市消防局 救護學院 | 全民急救教學</title>
+    <meta name="description" content="台北市政府消防局 EMS Academy 提供專業的 CPR、AED、異物哽塞與止血教學，守護生命之鏈，你就是關鍵。">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="bg-watermark"></div>
+
+    <header class="hero">
+        <img src="logo.png" alt="EMS Academy Logo" class="hero-logo" id="main-logo">
+        <h1>救護學院</h1>
+        <p>台北市政府消防局 EMS Academy</p>
+        <p>「叫、叫、壓、電」緊扣生命之鏈，看見重生的力量與希望。</p>
+        <a href="tel:119" class="btn-emergency" id="btn-119">
+            <i data-lucide="phone-call"></i> 立即撥打 119
+        </a>
+    </header>
+
+    <main class="container">
+        
+        <!-- CPR 專區 -->
+        <h2 class="section-title">心肺復甦術 CPR + AED</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <span class="card-icon">🤜</span>
+                <h3>叫：確認反應</h3>
+                <p>拍打雙肩並呼喚，確認有無意識與正常呼吸（瀕死式呼吸應視為無呼吸）。</p>
+            </div>
+            <div class="glass-card">
+                <span class="card-icon">📞</span>
+                <h3>叫：尋求協助</h3>
+                <p>指定旁人撥打 119 並取得 AED。手機請開啟擴音接受執勤員指導 (DA-CPR)。</p>
+            </div>
+            <div class="glass-card">
+                <span class="card-icon">💓</span>
+                <h3>壓：高品質按壓</h3>
+                <p>每秒 2 下，深度至少 5 公分。跟著張惠妹《給我感覺》的節奏動起來！</p>
+                <div class="rhythm-pulse"></div>
+            </div>
+            <div class="glass-card">
+                <span class="card-icon">⚡</span>
+                <h3>電：使用 AED</h3>
+                <p>打開電源，依語音指示操作。電擊後不須移除貼片，立即持續 CPR。</p>
+            </div>
+        </div>
+
+        <!-- 異物哽塞 -->
+        <h2 class="section-title">異物哽塞排除</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <h3>意識清楚：哈姆立克法</h3>
+                <p>站在傷患後方成弓箭步，一手握拳置於上腹部正中線（肚臍上方），另一手抱住拳頭，向後上方快速重複推擠。</p>
+            </div>
+            <div class="glass-card">
+                <h3>特殊族群處理</h3>
+                <ul>
+                    <li><strong>孕婦/肥胖者：</strong> 腹戳位置移至胸部中央。</li>
+                    <li><strong>嬰兒：</strong> 採「背部扣擊」及「胸部快速按壓」各 5 次。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 止血包紮 -->
+        <h2 class="section-title">急救止血處置</h2>
+        <div class="grid">
+            <div class="glass-card">
+                <h3>加壓止血</h3>
+                <p>靜脈出血通常以敷料直接加壓 5-10 分鐘即可改善。建議選擇紗布而非衛生紙。</p>
+            </div>
+            <div class="glass-card">
+                <h3>止血帶 (CAT)</h3>
+                <p>動脈大出血時，於傷處近心端套上止血帶並旋緊至出血減緩。務必記下上帶時間交接給 119。</p>
+            </div>
+        </div>
+
+        <!-- 法律與申請 -->
+        <section class="glass-card" style="margin-top: 50px; text-align: center;">
+            <i data-lucide="shield-check" style="color: var(--accent-cyan); width: 48px; height: 48px;"></i>
+            <h3>施救免責．法源保障</h3>
+            <p>《緊急醫療救護法》第 14-2 條：非救護人員為免除他人生命急迫危險，施予急救措施者，適用民、刑法緊急避難免責之規定。</p>
+            <br>
+            <a href="https://www.119.gov.taipei/" target="_blank" style="color: var(--primary-blue); font-weight: bold;">申請「全民急救教學」服務 →</a>
+        </section>
+
+    </main>
+
+    <footer style="padding: 100px 0 50px; text-align: center; color: #666;">
+        <p>&copy; 2026 台北市政府消防局 救護學院 EMS Academy</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* 台北市消防局 救護學院 (EMS Academy) - 核心設計系統 */
+
+:root {
+    --primary-blue: #00428B;      /* Logo 深藍 */
+    --accent-cyan: #00B2D4;       /* Logo 青藍 */
+    --emergency-red: #FF3B30;     /* 緊急紅 */
+    --white: #FFFFFF;
+    --light-gray: #F5F7FA;
+    --dark-text: #1A1A1A;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* 背景 Logo 浮水印效果 */
+.bg-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmin;
+    height: 80vmin;
+    background: url('logo.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 佈局容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 現代化毛玻璃卡片 */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+/* 英雄區塊 */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-cyan));
+    color: var(--white);
+    position: relative;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.hero-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* 緊急撥號按鈕 */
+.btn-emergency {
+    background: var(--emergency-red);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(255, 59, 48, 0.3);
+}
+
+.btn-emergency:hover {
+    transform: scale(1.05);
+}
+
+/* 卡片網格 */
+.section-title {
+    text-align: center;
+    margin: 80px 0 40px;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* CPR 節奏器 */
+.rhythm-pulse {
+    width: 60px;
+    height: 60px;
+    background: var(--emergency-red);
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: pulse 0.54s infinite; /* 110 bpm -> ~0.54s per pulse */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 響應式優化 */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero { height: auto; padding: 100px 20px; }
+}
