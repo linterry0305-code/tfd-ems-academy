@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>民眾版 CPR | EMS Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .content-container { background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); max-width: 900px; margin: 0 auto; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--primary-blue); text-decoration: none; margin-bottom: 20px; font-weight: 600; }
+        .step-list { list-style: none; margin-top: 30px; }
+        .step-item { display: flex; gap: 20px; margin-bottom: 30px; }
+        .step-num { min-width: 40px; height: 40px; background: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .rhythm-box { background: #f8fafc; border-left: 5px solid var(-- emergency-red); padding: 20px; margin: 20px 0; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Logo" class="sidebar-logo">
+            <br>
+            <span>救護學院 Dashboard</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="layout-dashboard"></i> <span>控制台</span>
+            </a>
+            <a href="cpr.html" class="nav-item active">
+                <i data-lucide="heart"></i> <span>民眾版 CPR</span>
+            </a>
+            <a href="choking.html" class="nav-item">
+                <i data-lucide="frown"></i> <span>異物哽塞</span>
+            </a>
+            <a href="bleeding.html" class="nav-item">
+                <i data-lucide="droplet"></i> <span>包紮止血</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <a href="index.html" class="back-btn"><i data-lucide="arrow-left"></i> 返回儀表板</a>
+        
+        <div class="content-container">
+            <h1>核心單元：民眾版 CPR</h1>
+            <p style="color: var(--muted-text); margin-top: 10px;">教材來源：台北市政府消防局 公版教材</p>
+            <hr style="margin: 30px 0; opacity: 0.1;">
+
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div>
+                        <h3>叫：確認反應</h3>
+                        <p>輕拍雙肩，呼喚患者。觀察胸部有無起伏（評估呼吸時間不超過 10 秒）。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div>
+                        <h3>叫：求救與取得 AED</h3>
+                        <p>大聲呼救，指派特定人撥打 119、取得 AED。若無旁人，請自行以手機開啟擴音求救。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div>
+                        <h3>壓：胸部按壓</h3>
+                        <p>兩乳頭連線中點（胸骨下半部）。</p>
+                        <div class="rhythm-box">
+                            <strong>訓練節奏：100-120 次/分</strong><br>
+                            對照歌曲：張惠妹《給我感覺》<br>
+                            要領：用力壓、快快壓、胸回彈、莫中斷。
+                        </div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div>
+                        <h3>電：使用 AED</h3>
+                        <p>打開電源，依照語音操作。分析心律時不碰觸病患，電擊後立即接續 CPR。</p>
+                    </div>
+                </div>
+            </div>
+
+            <section style="margin-top: 40px; padding: 20px; background: #FFF5F5; border-radius: 12px;">
+                <h4 style="color: var(--emergency-red);"><i data-lucide="info"></i> 特別叮嚀</h4>
+                <p>若遇到「瀕死式呼吸」（呼吸緩慢、張口但無胸部起伏），應視為無正常呼吸並立即開始 CPR。</p>
+            </section>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

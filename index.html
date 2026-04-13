@@ -3,106 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台北市消防局 救護學院 | 全民急救教學</title>
-    <meta name="description" content="台北市政府消防局 EMS Academy 提供專業的 CPR、AED、異物哽塞與止血教學，守護生命之鏈，你就是關鍵。">
+    <title>EMS Academy | 救護教學儀表板</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <div class="bg-watermark"></div>
-
-    <header class="hero">
-        <img src="logo.png" alt="EMS Academy Logo" class="hero-logo" id="main-logo">
-        <h1>救護學院</h1>
-        <p>台北市政府消防局 EMS Academy</p>
-        <p>「叫、叫、壓、電」緊扣生命之鏈，看見重生的力量與希望。</p>
-        <a href="tel:119" class="btn-emergency" id="btn-119">
-            <i data-lucide="phone-call"></i> 立即撥打 119
-        </a>
-    </header>
-
-    <main class="container">
-        
-        <!-- CPR 專區 -->
-        <h2 class="section-title">心肺復甦術 CPR + AED</h2>
-        <div class="grid">
-            <div class="glass-card">
-                <span class="card-icon">🤜</span>
-                <h3>叫：確認反應</h3>
-                <p>拍打雙肩並呼喚，確認有無意識與正常呼吸（瀕死式呼吸應視為無呼吸）。</p>
-            </div>
-            <div class="glass-card">
-                <span class="card-icon">📞</span>
-                <h3>叫：尋求協助</h3>
-                <p>指定旁人撥打 119 並取得 AED。手機請開啟擴音接受執勤員指導 (DA-CPR)。</p>
-            </div>
-            <div class="glass-card">
-                <span class="card-icon">💓</span>
-                <h3>壓：高品質按壓</h3>
-                <p>每秒 2 下，深度至少 5 公分。跟著張惠妹《給我感覺》的節奏動起來！</p>
-                <div class="rhythm-pulse"></div>
-            </div>
-            <div class="glass-card">
-                <span class="card-icon">⚡</span>
-                <h3>電：使用 AED</h3>
-                <p>打開電源，依語音指示操作。電擊後不須移除貼片，立即持續 CPR。</p>
-            </div>
-        </div>
-
-        <!-- 異物哽塞 -->
-        <h2 class="section-title">異物哽塞排除</h2>
-        <div class="grid">
-            <div class="glass-card">
-                <h3>意識清楚：哈姆立克法</h3>
-                <p>站在傷患後方成弓箭步，一手握拳置於上腹部正中線（肚臍上方），另一手抱住拳頭，向後上方快速重複推擠。</p>
-            </div>
-            <div class="glass-card">
-                <h3>特殊族群處理</h3>
-                <ul>
-                    <li><strong>孕婦/肥胖者：</strong> 腹戳位置移至胸部中央。</li>
-                    <li><strong>嬰兒：</strong> 採「背部扣擊」及「胸部快速按壓」各 5 次。</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 止血包紮 -->
-        <h2 class="section-title">急救止血處置</h2>
-        <div class="grid">
-            <div class="glass-card">
-                <h3>加壓止血</h3>
-                <p>靜脈出血通常以敷料直接加壓 5-10 分鐘即可改善。建議選擇紗布而非衛生紙。</p>
-            </div>
-            <div class="glass-card">
-                <h3>止血帶 (CAT)</h3>
-                <p>動脈大出血時，於傷處近心端套上止血帶並旋緊至出血減緩。務必記下上帶時間交接給 119。</p>
-            </div>
-        </div>
-
-        <!-- 法律與申請 -->
-        <section class="glass-card" style="margin-top: 50px; text-align: center;">
-            <i data-lucide="shield-check" style="color: var(--accent-cyan); width: 48px; height: 48px;"></i>
-            <h3>施救免責．法源保障</h3>
-            <p>《緊急醫療救護法》第 14-2 條：非救護人員為免除他人生命急迫危險，施予急救措施者，適用民、刑法緊急避難免責之規定。</p>
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Logo" class="sidebar-logo">
             <br>
-            <a href="https://www.119.gov.taipei/" target="_blank" style="color: var(--primary-blue); font-weight: bold;">申請「全民急救教學」服務 →</a>
-        </section>
+            <span>救護學院 Dashboard</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item active">
+                <i data-lucide="layout-dashboard"></i> <span>控制台</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="book-open"></i> <span>所有課程</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="video"></i> <span>影片專區</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="settings"></i> <span>系統設定</span>
+            </a>
+        </nav>
+    </aside>
 
+    <!-- Main Content -->
+    <main>
+        <header class="top-bar">
+            <div class="welcome-msg">
+                <h1>歡迎回來，教官</h1>
+                <p style="color: var(--muted-text);">今天又是守護生命的好日子。</p>
+            </div>
+            <div class="user-profile" style="display: flex; align-items: center; gap: 15px;">
+                <span id="current-date" style="font-weight: 600;"></span>
+                <i data-lucide="bell" style="cursor: pointer;"></i>
+                <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%;"></div>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon"><i data-lucide="library"></i></div>
+                <div class="stat-info">
+                    <h4>教材單元</h4>
+                    <p>3 門課程</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="color: var(--emergency-red); background: rgba(255,59,48,0.1);">
+                    <i data-lucide="heart-pulse"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>緊急求救次數</h4>
+                    <p>119</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon" style="color: #2D3748; background: #EDF2F7;">
+                    <i data-lucide="users"></i>
+                </div>
+                <div class="stat-info">
+                    <h4>線上學習中</h4>
+                    <p>Active</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modules -->
+        <h2 class="module-section-title">核心救護單元</h2>
+        <div class="module-grid">
+            
+            <!-- CPR -->
+            <div class="module-card" onclick="window.location.href='cpr.html'">
+                <div class="module-image">💓</div>
+                <div class="module-content">
+                    <span class="module-badge">核心技術</span>
+                    <h3>民眾版 CPR</h3>
+                    <p>叫、叫、壓、電。掌握黃金救援時間 4 分鐘。</p>
+                    <button class="btn-open">開啟教材</button>
+                </div>
+            </div>
+
+            <!-- Choking -->
+            <div class="module-card" onclick="window.location.href='choking.html'">
+                <div class="module-image">✋</div>
+                <div class="module-content">
+                    <span class="module-badge">異物處理</span>
+                    <h3>異物哽塞排除法</h3>
+                    <p>哈姆立克法操作要領，成人、嬰兒、孕婦全面覆蓋。</p>
+                    <button class="btn-open">開啟教材</button>
+                </div>
+            </div>
+
+            <!-- Bleeding -->
+            <div class="module-card" onclick="window.location.href='bleeding.html'">
+                <div class="module-image">🩹</div>
+                <div class="module-content">
+                    <span class="module-badge">創傷處置</span>
+                    <h3>包紮止血</h3>
+                    <p>加壓止血、止血帶 (CAT) 使用。守護大量失血傷患。</p>
+                    <button class="btn-open">開啟教材</button>
+                </div>
+            </div>
+
+        </div>
     </main>
 
-    <footer style="padding: 100px 0 50px; text-align: center; color: #666;">
-        <p>&copy; 2026 台北市政府消防局 救護學院 EMS Academy</p>
-    </footer>
-
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('zh-TW', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包紮止血 | EMS Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .content-container { background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); max-width: 900px; margin: 0 auto; }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--primary-blue); text-decoration: none; margin-bottom: 20px; font-weight: 600; }
+        .method-card { display: flex; gap: 20px; background: #f8fafc; padding: 25px; border-radius: 12px; margin-bottom: 20px; }
+        .method-icon { font-size: 2.5rem; }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="sidebar-header">
+            <img src="logo.png" alt="Logo" class="sidebar-logo">
+            <br>
+            <span>救護學院 Dashboard</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="layout-dashboard"></i> <span>控制台</span>
+            </a>
+            <a href="cpr.html" class="nav-item">
+                <i data-lucide="heart"></i> <span>民眾版 CPR</span>
+            </a>
+            <a href="choking.html" class="nav-item">
+                <i data-lucide="frown"></i> <span>異物哽塞</span>
+            </a>
+            <a href="bleeding.html" class="nav-item active">
+                <i data-lucide="droplet"></i> <span>包紮止血</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main>
+        <a href="index.html" class="back-btn"><i data-lucide="arrow-left"></i> 返回儀表板</a>
+        
+        <div class="content-container">
+            <h1>包紮止血與創傷處置</h1>
+            <p style="color: var(--muted-text); margin-top: 10px;">教材來源：台北市政府消防局 公版教材</p>
+            <hr style="margin: 30px 0; opacity: 0.1;">
+
+            <div class="method-card">
+                <div class="method-icon">🖐️</div>
+                <div>
+                    <h3>直接加壓止血</h3>
+                    <p>適用於一般靜脈出血。以紗布或清潔衣物蓋住傷口並施壓 5-10 分鐘，直到出血停止或救護車到達。</p>
+                </div>
+            </div>
+
+            <div class="method-card" style="background: #FFF5F5; border: 1px solid var(--emergency-red);">
+                <div class="method-icon">🩸</div>
+                <div>
+                    <h3>止血帶 (Tourniquet)</h3>
+                    <p>適用於肢體大血管損傷時。使用 CAT 止血帶於傷口近心端 5-8 公分處旋緊。</p>
+                    <p style="color: var(--emergency-red); font-weight: 700; margin-top: 10px;">提醒：務必記下上止血帶的時間，交接給 119 人員。</p>
+                </div>
+            </div>
+
+            <div class="method-card">
+                <div class="method-icon">🛡️</div>
+                <div>
+                    <h3>自我防護</h3>
+                    <p>處理傷口時應配戴防水手套，避免接觸病患血液以防感染（B肝、C肝、愛滋）。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
